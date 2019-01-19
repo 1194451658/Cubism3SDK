@@ -11,6 +11,8 @@ namespace Live2D.Cubism.Framework.Raycasting
     /// <summary>
     /// Precision for casting rays against a <see cref="CubismRaycastable"/>.
     /// </summary>
+
+	// 指定碰撞枚举
     public enum CubismRaycastablePrecision
     {
         /// <summary>

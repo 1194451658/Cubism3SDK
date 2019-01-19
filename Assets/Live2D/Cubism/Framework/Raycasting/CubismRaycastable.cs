@@ -14,11 +14,16 @@ namespace Live2D.Cubism.Framework.Raycasting
     /// <summary>
     /// Allows raycasting against <see cref="Core.CubismDrawable"/>s.
     /// </summary>
+
+	// 就是简单的脚本挂载，进行标记
     public sealed class CubismRaycastable : MonoBehaviour
     {
         /// <summary>
         /// The precision.
         /// </summary>
+
+		// 就是指定枚举是BoundingBox，还是Triangles
+		// Triangles是没有实现？
         public CubismRaycastablePrecision Precision;
     }
 }

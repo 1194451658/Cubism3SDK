@@ -22,23 +22,28 @@ namespace Live2D.Cubism.Framework.Raycasting
         /// <summary>
         /// <see cref="CubismRenderer"/>s with <see cref="CubismRaycastable"/>s attached.
         /// </summary>
+
+		// 要检测碰撞的，渲染控件
         private CubismRenderer[] Raycastables { get; set; }
 
         /// <summary>
         /// <see cref="CubismRaycastablePrecision"/>s with <see cref="CubismRaycastable"/>s attached.??????????????
         /// </summary>
-        private CubismRaycastablePrecision[] RaycastablePrecisions { get; set; }
 
+		// 碰撞控件上，设置的碰撞精度设置
+        private CubismRaycastablePrecision[] RaycastablePrecisions { get; set; }
 
         /// <summary>
         /// Refreshes the controller. Call this method after adding and/or removing <see cref="CubismRaycastable"/>.
         /// </summary>
+
+		// 获取到CubismModel
+		// 获取到所有挂载了CubismRaycastable控件的Renderers
         private void Refresh()
         {
-            var candidates = this
-                .FindCubismModel()
-                .Drawables;
-
+			// FindCubismModel: 扩展函数. ComponentExtensionMethods.cs中定义
+			// 在自己或父亲上，找到CubismModel控件
+            var candidates = this.FindCubismModel().Drawables;
 
             // Find raycastable drawables.
             var raycastables = new List<CubismRenderer>();

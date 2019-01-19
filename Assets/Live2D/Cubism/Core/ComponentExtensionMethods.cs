@@ -22,6 +22,8 @@ namespace Live2D.Cubism.Core
         /// <param name="self">Component to base search on.</param>
         /// <param name="includeParents">Condition for including parents in search.</param>
         /// <returns>The relative <see cref="CubismModel"/> if found; <see langword="null"/> otherwise.</returns>
+
+		// 在自己或父亲上，找到CubismModel控件
         public static CubismModel FindCubismModel(this Component self, bool includeParents = false)
         {
             // Validate arguments.
